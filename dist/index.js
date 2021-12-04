@@ -85,7 +85,7 @@ var ReactWizard = /*#__PURE__*/function (_React$Component) {
     }
 
     _this.state = {
-      currentStep: 0,
+      currentStep: _this.props.startStep,
       highestStep: 0,
       color: _this.props.color !== undefined ? _this.props.color : "primary",
       nextButton: _this.props.steps.length > 1 ? true : false,
@@ -582,6 +582,7 @@ ReactWizard.defaultProps = {
 };
 ReactWizard.propTypes = {
   color: _propTypes["default"].oneOf(["primary", "green", "orange", "red", "blue"]),
+  startStep: _propTypes["default"].number,
   previousButtonClasses: _propTypes["default"].string,
   finishButtonClasses: _propTypes["default"].string,
   nextButtonClasses: _propTypes["default"].string,
